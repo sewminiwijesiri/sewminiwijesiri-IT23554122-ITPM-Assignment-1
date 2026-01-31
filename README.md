@@ -1,65 +1,38 @@
-# Singlish to Sinhala Transliteration Test Suite
+# Playwright Automation – Assignment 1
 
-This project contains an automated test suite for verifying Singlish to Sinhala transliteration accuracy, specifically targeting the [SwiftTranslator](https://www.swifttranslator.com/) web application. It uses **Playwright** for end-to-end testing.
+## Student Information
+- Student ID: IT23554122 
+- Assignment: Assignment 1 – Test Automation  
+- Option Selected: Option 1 (Playwright)
+
+## Git Repository
+This repository is publicly accessible and contains the complete Playwright project:  
+https://github.com/sewminiwijesiri/sewminiwijesiri-IT23554122-ITPM-Assignment-1.git
 
 ## Project Overview
+This project demonstrates basic test automation using Playwright. The test cases were first designed and documented in an Excel sheet, and selected scenarios were automated using Playwright. The system under test is a *Singlish to Sinhala translation web application (SwiftTranslator).*
 
-The test suite is designed to validate the accuracy and robustness of the transliteration engine. It includes 35 optimized test cases covering:
-- **Positive Functional Scenarios (1-24):** Validating correct transliteration for common phrases, simple/medium sentences, and mixed numeric/English inputs.
-- **Negative Functional Scenarios (25-34):** Testing robustness against messy inputs, typos, and edge cases.
-- **UI Validation:** Basic UI responsiveness checks.
+## Tools and Technologies Used
+Node.js, Playwright, JavaScript, Visual Studio Code.
 
-The tests run against `https://www.swifttranslator.com/` and use a fuzzy matching logic (60% word match threshold) to account for minor engine variations.
+## Test Types Covered
+Positive Functional Test, Negative Functional Test (conceptual mapping), and UI Test (real-time output behavior).
 
-## Prerequisites
-
-- **Node.js**: Ensure you have Node.js installed (v14 or higher is recommended).
-- **npm**: Comes with Node.js.
-
-## Installation
-
-1. Clone the repository (if you haven't already):
+## Installation and How to Run the Tests
+1. Install [Node.js](https://nodejs.org/) if not already installed.  
+2. Clone the repository and navigate into it:
    ```bash
-   git clone <repository-url>
-   cd it23554122
-   ```
+   git clone https://github.com/sewminiwijesiri/sewminiwijesiri-IT23554122-ITPM-Assignment-1.git
+   cd IT23554122-ITPM-Assignment-1
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+3. Run all tests:
+   npx playwright test
 
-3. Install Playwright browsers:
-   ```bash
-   npx playwright install
-   ```
+## Project Structure
+- tests/ – All test scripts  
+- playwright.config.js – Playwright configuration  
+- package.json – Node dependencies  
+- GitHub_Link.txt – Text file containing the GitHub repository link
 
-## Usage
-
-To run the entire test suite:
-
-```bash
-npx playwright test
-```
-
-To run a specific test file:
-
-```bash
-npx playwright test tests/it23554122.spec.ts
-```
-
-To view the test report:
-
-```bash
-npx playwright show-report
-```
-
-## Structure
-
-- **`tests/it23554122.spec.ts`**: The main test file containing the 35 test cases and logic.
-- **`IT23554122.xlsx`**: Excel file containing test data (if applicable/used in other contexts).
-- **`playwright.config.ts`**: Configuration for Playwright (browsers, timeouts, etc.).
-
-## Test Logic
-
-The test suite enters Singlish text into the input area and captures the generated Sinhala output. It then cleans both the actual and expected strings and performs a word-by-word comparison. A match rate of **60% or higher** is considered a pass to allow for minor transliteration differences.
+## Conclusion
+This project demonstrates the ability to design test cases and automate selected scenarios using Playwright. The automation scripts validate basic functionality and UI behavior of the system under test.
